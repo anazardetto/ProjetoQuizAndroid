@@ -46,11 +46,24 @@ public class MainActivity extends AppCompatActivity {
         rdgPrincipal = findViewById(R.id.rbg_principal);
         btnResponder = findViewById(R.id.btnResponder);
 
+        carregarPerguntas();
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    private void carregarPerguntas(){
+        if(indicePergunta < perguntas.length){
+            txvPergunta.setText(perguntas[indicePergunta]);
+            rdgPrincipal.clearCheck();
+            btnResponder.setEnabled(true);
+
+        }else{
+            txvPergunta.setText("Fim");
+            btnResponder.setEnabled(false);
+        }
     }
 }
