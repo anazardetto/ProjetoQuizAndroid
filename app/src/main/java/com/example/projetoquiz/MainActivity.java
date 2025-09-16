@@ -1,7 +1,9 @@
 package com.example.projetoquiz;
 
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
     TextView txvPergunta;
     RadioGroup rdgPrincipal;
-    button btnResponder;
+    Button btnResponder;
     int pontuacao = 0;
     int indicePergunta = 0;
 
@@ -39,6 +41,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+
+        txvPergunta = findViewById(R.id.txvPergunta);
+        rdgPrincipal = findViewById(R.id.rbg_principal);
+        btnResponder = findViewById(R.id.btnResponder);
+
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
