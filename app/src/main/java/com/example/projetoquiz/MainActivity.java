@@ -1,6 +1,7 @@
 package com.example.projetoquiz;
 
 import android.os.Bundle;
+import android.widget.RadioGroup;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,7 +10,29 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    int numero;
+    TextView txvPergunta;
+    RadioGroup rdgPrincipal;
+    button btnResponder;
+    int pontuacao = 0;
+    int indicePergunta = 0;
+
+    String [] perguntas = {
+            "Minha pergunta 1",
+            "Minha pergunta 2",
+            "Minha pergunta 3",
+            "Minha pergunta 4",
+            "Minha pergunta 5"
+    };
+
+    int []respostasCorretas = {
+            R.id.rb_a,
+            R.id.rb_b,
+            R.id.rb_c,
+            R.id.rb_d
+    };
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
