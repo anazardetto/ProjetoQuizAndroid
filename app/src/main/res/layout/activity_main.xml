@@ -5,12 +5,13 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     tools:context=".MainActivity">
 
     <RadioGroup
         android:id="@+id/rbg_principal"
-        android:layout_width="297dp"
-        android:layout_height="199dp"
+        android:layout_width="322dp"
+        android:layout_height="316dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,25 +21,45 @@
             android:id="@+id/rb_a"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/botao1"
             android:text="@string/texto_alternativa_a" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13sp" />
 
         <RadioButton
             android:id="@+id/rb_b"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/botao1"
             android:text="@string/texto_alternativa_b" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13sp" />
 
         <RadioButton
             android:id="@+id/rb_c"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/botao1"
             android:text="@string/texto_alternativa_c" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13sp" />
 
         <RadioButton
             android:id="@+id/rb_d"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/botao1"
             android:text="@string/texto_alternativa_d" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
     </RadioGroup>
 
@@ -46,15 +67,16 @@
         android:id="@+id/btnResponder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/botao2"
         android:text="@string/texto_botao"
-        tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="504dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="524dp" />
 
     <TextView
         android:id="@+id/txvPergunta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        tools:layout_editor_absoluteX="166dp"
-        tools:layout_editor_absoluteY="144dp" />
+        tools:layout_editor_absoluteX="176dp"
+        tools:layout_editor_absoluteY="71dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
